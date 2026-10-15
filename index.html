@@ -82,6 +82,7 @@ h2{font-family:var(--f-display);font-size:18px;margin:0 0 10px}
 .r-awas{background:var(--awas-bg);color:var(--awas)}
 .r-rehat{background:var(--rehat-bg);color:var(--rehat)}
 .r-kosong{background:var(--kosong-bg);color:var(--kosong)}
+.r-pdpc{background:var(--bg);color:var(--muted);border-color:var(--line)}
 .chip.maybe{background:transparent;border:1px dashed currentColor}
 .lines{display:grid;gap:3px;font-size:13px}
 .lines div{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
@@ -238,7 +239,8 @@ h2{font-family:var(--f-display);font-size:18px;margin:0 0 10px}
       <ul>
         <li><b>Tingkatan 5 (5C)</b>: tiada jadual peperiksaan T5 dalam fail, jadi slot 5C (Selasa 11.10–12.10, Jumaat 8.10–9.10) tidak disemak.</li>
         <li><b>Slot PJPK 4C/4D/4E</b>: kelas gabungan. Sahkan kelas mana yang Cikgu jaga ketika peperiksaan.</li>
-        <li><b>Kod kertas tercetak</b>: Sains Kertas 2 (19.10) tertulis 1511/1, Amali Biologi tertulis 4531/1, Amali Fizik tertulis 4551/3. Halaman ini memaparkan kod seperti tercetak.</li>
+        <li><b>Kod kertas tercetak</b>: B. Inggeris 1 (16.10) tertulis 1119/3, Sains Kertas 2 (19.10) tertulis 1511/1, Amali Biologi tertulis 4531/3, Amali Fizik tertulis 4551/3. Halaman ini memaparkan kod seperti tercetak.</li>
+        <li><b>Versi jadual</b>: PAT T4 versi 1.0 (dikemas kini 15 Okt 2026). B. Inggeris dan Matematik telah dipindahkan dari 13 dan 14 Okt, yang kini PdPR.</li>
       </ul>
 
       <h3>Jadual waktu Cikgu (dibaca daripada gambar)</h3>
@@ -283,74 +285,73 @@ const MY=[
 const X=[];
 function A(dt,f,t,s,e,k,n,m,by,el){X.push({id:X.length,dt,f,t,s:tm(s),e:tm(e),k:k||'',n,m:m||'',by:by||'',el:el||null})}
 const T4=[4],T13=[1,3],T2=[2];
-// PAT T4
+// PAT T4 (versi 1.0, dikemas kini 15.10.2026)
 A('2026-10-02',T4,'oral','8.00','9.00','1103/4','Ujian Mendengar B. Melayu','1 jam','Atieqah Shuhahda');
 A('2026-10-02',T4,'oral','9.00','10.00','1119/4','Ujian Mendengar B. Inggeris','1 jam','Nik Zarith');
 A('2026-10-02',T4,'rehat','10.10','10.40','','Rehat');
 A('2026-10-02',T4,'note','10.40','12.10','','PdPc seperti biasa');
 A('2026-10-05',T4,'oral','8.00','2.00','1103/3','Ujian Bertutur B. Melayu','','Musliha');
 A('2026-10-06',T4,'oral','8.00','2.00','1103/3','Ujian Bertutur B. Melayu','','Musliha');
+A('2026-10-06',T4,'oral','8.00','2.00','','UTQH','','Zikri');
 A('2026-10-07',T4,'oral','8.00','2.00','1119/3','Ujian Bertutur B. Inggeris','','Nik Zarith');
+A('2026-10-07',T4,'oral','8.00','2.00','','UTQH','','Zikri');
 A('2026-10-08',T4,'oral','8.00','2.00','1119/3','Ujian Bertutur B. Inggeris','','Nik Zarith');
-A('2026-10-09',T4,'note',null,null,'','Hari Sukan Negara');
+A('2026-10-08',T4,'oral','8.00','2.00','','UTQH','','Zikri');
+A('2026-10-09',T4,'note',null,null,'','PdPR');
 A('2026-10-12',T4,'paper','8.00','10.00','1103/1','B. Melayu 1','2 jam','Zurina');
 A('2026-10-12',T4,'rehat','10.10','10.40','','Rehat');
 A('2026-10-12',T4,'paper','11.00','1.30','1103/2','B. Melayu 2','2 jam 30 min','Azzurah');
-A('2026-10-13',T4,'paper','8.00','9.30','1119/1','B. Inggeris 1','1 jam 30 min','Nik Zarith');
-A('2026-10-13',T4,'rehat','10.40','11.10','','Rehat');
-A('2026-10-13',T4,'paper','11.15','12.45','1119/2','B. Inggeris 2','1 jam 30 min','Nik Zarith');
-A('2026-10-14',T4,'paper','8.00','9.30','1149/1','Matematik 1','1 jam 30 min','Norsuraya');
-A('2026-10-14',T4,'rehat','10.40','11.10','','Rehat');
-A('2026-10-14',T4,'paper','11.10','1.40','1149/2','Matematik 2','2 jam 30 min','Hairol Nizam');
+A('2026-10-13',T4,'note',null,null,'','PdPR');
+A('2026-10-14',T4,'note',null,null,'','PdPR');
 A('2026-10-15',T4,'paper','8.00','9.00','1249/1','Sejarah 1','1 jam','Siti Nurliyana');
 A('2026-10-15',T4,'rehat','10.40','11.10','','Rehat');
 A('2026-10-15',T4,'paper','11.10','1.40','1249/2','Sejarah 2','2 jam 30 min','Nurhafiyanti');
 A('2026-10-16',T4,'paper','7.40','10.10','1223/1','Pend. Islam','2 jam 30 min','Ahmad Fadhli');
 A('2026-10-16',T4,'paper','7.40','10.10','1225/1','Pend. Moral','2 jam 30 min','Ain Zulaikha');
 A('2026-10-16',T4,'rehat','10.10','10.40','','Rehat');
-A('2026-10-16',T4,'paper','11.00','12.00','','PJPK','1 jam','Wong Ai Ying');
+A('2026-10-16',T4,'paper','10.40','12.10','1119/3','B. Inggeris 1','1 jam 30 min','Nik Zarith');
 A('2026-10-19',T4,'paper','8.00','9.15','1511/1','Sains 1','1 jam 15 min','Maizura');
 A('2026-10-19',T4,'paper','8.00','9.15','4531/1','Fizik 1','1 jam 15 min','Murtadha');
 A('2026-10-19',T4,'rehat','10.10','10.40','','Rehat');
 A('2026-10-19',T4,'paper','11.00','1.30','1511/1','Sains 2','2 jam 30 min','Maizura');
 A('2026-10-19',T4,'paper','11.00','1.30','4531/2','Fizik 2','2 jam 30 min','Murtadha');
-A('2026-10-20',T4,'paper','7.40','10.40','','UTQH','','Mohd Zikri','utqh');
-A('2026-10-20',T4,'paper','8.00','9.45','6351/1','Bahasa Cina 1','1 jam 45 min','Liew Yak Ping','bc');
+A('2026-10-20',T4,'paper','7.40','8.40','','PJPK','1 jam','Wong Ai Ying');
+A('2026-10-20',T4,'paper','8.50','10.35','6351/1','Bahasa Cina 1','1 jam 45 min','Liew Yak Ping','bc');
+A('2026-10-20',T4,'paper','9.00','10.00','2611/1','Pend. Seni Visual 1','1 jam','Izzat','psv');
 A('2026-10-20',T4,'rehat','10.40','11.10','','Rehat');
 A('2026-10-20',T4,'paper','11.15','1.30','6351/2','Bahasa Cina 2','2 jam 15 min','Liew Yak Ping','bc');
-A('2026-10-20',T4,'paper','11.15','1.30','','UTQH','','Mohd Zikri','utqh');
 A('2026-10-21',T4,'paper','7.40','10.40','2611/2','Pend. Seni Visual 2','3 jam','Izzat','psv');
 A('2026-10-21',T4,'paper','8.00','10.30','3763/1','Reka Cipta 1','2 jam 30 min','Farhan','rc');
-A('2026-10-21',T4,'oral','8.00','2.00','1119/3','Ujian Bertutur B. Inggeris','','Nik Zarith');
+A('2026-10-21',T4,'paper','8.30','10.30','7301/1','Landskap dan Nurseri','2 jam','Shamsuriza','lns');
+A('2026-10-21',T4,'oral','7.40','10.40','6351/3','Ujian Bertutur B. Cina','','Liew Yak Ping');
 A('2026-10-21',T4,'rehat','10.40','11.10','','Rehat');
-A('2026-10-21',T4,'paper','11.30','12.30','2611/1','Pend. Seni Visual 1','1 jam','Izzat','psv');
+A('2026-10-21',T4,'paper','11.20','12.50','1119/2','B. Inggeris 2','1 jam 30 min','Nik Zarith');
 A('2026-10-22',T4,'paper','8.00','9.15','3766/1','Perniagaan 1','1 jam 15 min','Rohayati','pern');
 A('2026-10-22',T4,'paper','8.00','9.15','4551/1','Biologi 1','1 jam 15 min','Norhaida','bio');
 A('2026-10-22',T4,'rehat','10.40','11.10','','Rehat');
 A('2026-10-22',T4,'paper','11.15','1.30','3766/2','Perniagaan 2','2 jam 15 min','Rohayati','pern');
 A('2026-10-22',T4,'paper','11.30','2.00','4551/2','Biologi 2','2 jam 30 min','Norhaida','bio');
-A('2026-10-23',T4,'paper','8.00','10.10','','UTQH','','Mohd Zikri','utqh');
-A('2026-10-23',T4,'oral','8.00','10.10','6531/3','Ujian Bertutur B. Cina','','Liew Yak Ping');
+A('2026-10-23',T4,'paper','7.40','10.10','1149/2','Matematik 2','2 jam 30 min','Hairol Nizam');
 A('2026-10-23',T4,'rehat','10.10','10.40','','Rehat');
-A('2026-10-23',T4,'paper','10.40','12.10','','UTQH','','Mohd Zikri','utqh');
+A('2026-10-23',T4,'paper','10.40','12.10','1149/1','Matematik 1','1 jam 30 min','Norsuraya');
 A('2026-10-26',T4,'paper','7.40','10.10','3771/1','GKT','2 jam 30 min','Mohd Faizal','gkt');
 A('2026-10-26',T4,'rehat','10.10','10.40','','Rehat');
-A('2026-10-26',T4,'paper','10.45','1.20','4541/2','Kimia 2','2 jam 30 min','Noor Farhana','kim');
-A('2026-10-26',T4,'paper','11.00','1.30','7301/1','Landskap dan Nurseri','2 jam 30 min','Shamsuriza','lns');
-A('2026-10-26',T4,'paper','1.45','3.00','4541/1','Kimia 1','1 jam 15 min','Noor Farhana','kim');
+A('2026-10-26',T4,'paper','10.45','12.00','4541/1','Kimia 1','1 jam 15 min','Noor Farhana','kim');
+A('2026-10-26',T4,'paper','12.30','3.00','4541/2','Kimia 2','2 jam 30 min','Noor Farhana','kim');
 A('2026-10-27',T4,'paper','8.00','9.15','3756/1','Prinsip Perakaunan 1','1 jam 15 min','Idawaty','pp');
-A('2026-10-27',T4,'oral','8.00','2.00','1119/3','Ujian Bertutur B. Inggeris','','Nik Zarith');
 A('2026-10-27',T4,'rehat','10.40','11.10','','Rehat');
 A('2026-10-27',T4,'paper','11.15','1.45','3756/2','Prinsip Perakaunan 2','2 jam 30 min','Idawaty','pp');
 A('2026-10-28',T4,'paper','8.00','10.30','3472/2','Matematik Tambahan 2','2 jam 30 min','Ezaze','am');
 A('2026-10-28',T4,'rehat','10.40','11.10','','Rehat');
 A('2026-10-28',T4,'paper','11.30','1.30','3472/1','Matematik Tambahan 1','2 jam','Ezaze','am');
 A('2026-10-29',T4,'paper','8.00','10.30','3770/1','Sains Komputer 1','2 jam 30 min','Azam Aziz','sk');
+A('2026-10-29',T4,'paper','8.00','9.00','4531/3','Ujian Amali Biologi','1 jam','Norhaida','bio');
 A('2026-10-29',T4,'rehat','10.40','11.10','','Rehat');
-A('2026-10-29',T4,'paper','11.30','12.30','4531/1','Ujian Amali Biologi','1 jam','Norhaida','bio');
-A('2026-10-30',T4,'paper','8.00','9.00','4541/3','Ujian Amali Kimia','1 jam','Noor Farhana','kim');
+A('2026-10-29',T4,'paper','12.00','1.00','4541/3','Ujian Amali Kimia','1 jam','Noor Farhana','kim');
+A('2026-10-30',T4,'paper','8.00','9.00','4551/3','Ujian Amali Fizik (Sidang 1)','1 jam','Murtadha','fiz');
+A('2026-10-30',T4,'paper','9.00','10.00','4551/3','Ujian Amali Fizik (Sidang 2)','1 jam','Murtadha','fiz');
 A('2026-10-30',T4,'rehat','10.10','10.40','','Rehat');
-A('2026-10-30',T4,'paper','11.00','12.00','4551/3','Ujian Amali Fizik','1 jam','Murtadha','fiz');
+A('2026-10-30',T4,'note','10.40','12.10','','PdPc seperti biasa');
 // UASA T1 & T3
 A('2026-10-19',T13,'paper','8.00','9.00','02/2','Bahasa Melayu 2','1 jam',{1:'Nurfarhana',3:'Nurfarhana'});
 A('2026-10-19',T13,'rehat','9.10','9.40','','Rehat');
@@ -396,15 +397,15 @@ A('2026-10-26',T2,'paper','8.00','9.30','','Pend. Moral','1 jam 30 min','Nursyaf
 A('2026-10-26',T2,'rehat','10.10','10.40','','Rehat');
 A('2026-10-26',T2,'paper','11.00','1.30','','Pend. Seni dan Visual','2 jam 30 min','Izzat Hazary');
 
-const EL={utqh:'UTQH',bc:'Bahasa Cina',psv:'Pend. Seni Visual',rc:'Reka Cipta',pern:'Perniagaan',bio:'Biologi',kim:'Kimia',fiz:'Fizik',gkt:'GKT',lns:'Landskap & Nurseri',pp:'Prinsip Perakaunan',am:'Matematik Tambahan',sk:'Sains Komputer'};
+const EL={bc:'Bahasa Cina',psv:'Pend. Seni Visual',rc:'Reka Cipta',pern:'Perniagaan',bio:'Biologi',kim:'Kimia',fiz:'Fizik',gkt:'GKT',lns:'Landskap & Nurseri',pp:'Prinsip Perakaunan',am:'Matematik Tambahan',sk:'Sains Komputer'};
 const ELCLS=['4B','4D','4C/4D/4E'];
 let cfg={};ELCLS.forEach(c=>cfg[c]=null);
 try{const s=JSON.parse(localStorage.getItem('pat26-elektif')||'null');if(s)ELCLS.forEach(c=>{if(s[c]===null||Array.isArray(s[c]))cfg[c]=s[c]})}catch(e){}
 function saveCfg(){try{localStorage.setItem('pat26-elektif',JSON.stringify(cfg))}catch(e){}}
 function applies(cls,el){if(!el)return'yes';const c=cfg[cls];if(c==null)return'maybe';return c.includes(el)?'yes':'no'}
 
-const ROLE={relief:'Relief',ambil:'Ambil kertas',kutip:'Kutip kertas',awas:'Mengawas',kosong:'Awas (tiada kertas)',rehat:'Awas waktu rehat'};
-const ORDER=['ambil','kutip','awas','rehat','kosong'];
+const ROLE={relief:'Relief',pdpc:'PdPc biasa',ambil:'Ambil kertas',kutip:'Kutip kertas',awas:'Mengawas',kosong:'Awas (tiada kertas)',rehat:'Awas waktu rehat'};
+const ORDER=['ambil','kutip','awas','rehat','kosong','pdpc'];
 
 function evalSes(D,ses){
   const F=parseInt(ses.cls,10)||0;
@@ -422,7 +423,10 @@ function evalSes(D,ses){
       if(kut)items.push({r:'kutip',x,sure});
       if(!amb&&!kut)items.push({r:'awas',x,sure});
     });
-    if(!yes)items.push({r:'kosong',sure:!maybe});
+    if(!yes){
+      const pd=X.find(x=>x.dt===D&&x.t==='note'&&x.s!=null&&x.f.includes(F)&&x.s<=S&&x.e>=E);
+      if(pd&&!maybe)items.push({r:'pdpc',x:pd,sure:true});else items.push({r:'kosong',sure:!maybe});
+    }
     if(F===4){const r=X.find(x=>x.dt===D&&x.t==='rehat'&&x.f.includes(4)&&x.s===E);if(r)items.push({r:'rehat',x:r,sure:true})}
   }
   return {D,ses,F,S,E,items,examDay:day.length>0};
@@ -458,6 +462,7 @@ function linesHTML(d){
   const rows=[];
   grouped(d.items).forEach(g=>{
     if(g.r==='kosong'){rows.push(`<div><span class="dot r-kosong" style="background:var(--kosong)"></span><span>${g.sure?'Tiada kertas pada waktu ini, awas kelas ikut jadual waktu.':'Jika kelas tidak ambil elektif di atas, awas kelas tanpa kertas.'}</span></div>`);return}
+    if(g.r==='pdpc'){rows.push(`<div><span class="dot" style="background:var(--muted)"></span><span>Peperiksaan selesai. ${esc(g.its[0].x.n)} dari ${ft(g.its[0].x.s)}.</span></div>`);return}
     if(g.r==='rehat'){rows.push(`<div><span class="dot" style="background:var(--rehat)"></span><span>Rehat ${ft(g.its[0].x.s)}–${ft(g.its[0].x.e)}: Cikgu guru sebelum rehat.</span></div>`);return}
     g.its.forEach(i=>{const x=i.x;const verb=g.r==='ambil'?'bermula '+ft(x.s):g.r==='kutip'?'tamat '+ft(x.e):ft(x.s)+'–'+ft(x.e);
       rows.push(`<div><span class="dot" style="background:var(--${g.r})"></span><span>${esc(x.n)}</span>${x.k?`<span class="k">${esc(x.k)}</span>`:''}<span class="k">· ${verb}</span></div>`)});
@@ -483,7 +488,7 @@ function renderTugas(){
   const all=compute();
   const showPast=document.getElementById('showPast').checked;
   const cnt={ambil:0,kutip:0,awas:0,maybe:0};
-  all.forEach(d=>{if(d.items.some(i=>i.r==='ambil'&&i.sure))cnt.ambil++;if(d.items.some(i=>i.r==='kutip'&&i.sure))cnt.kutip++;if(d.items.some(i=>i.sure)||d.ses.relief)cnt.awas++;if(hasMaybe(d))cnt.maybe++});
+  all.forEach(d=>{if(d.items.some(i=>i.r==='ambil'&&i.sure))cnt.ambil++;if(d.items.some(i=>i.r==='kutip'&&i.sure))cnt.kutip++;if(d.items.some(i=>i.sure&&i.r!=='pdpc')||d.ses.relief)cnt.awas++;if(hasMaybe(d))cnt.maybe++});
   const st=[['ambil','Ambil (pasti)',cnt.ambil],['kutip','Kutip (pasti)',cnt.kutip],['awas','Sesi bertugas',cnt.awas],['maybe','Ikut elektif',cnt.maybe]];
   document.getElementById('stats').innerHTML=st.map(s=>`<button class="stat ${s[0]}" data-f="${s[0]}" aria-pressed="${filter===s[0]}"><b>${s[2]}</b><span>${s[1]}</span></button>`).join('');
   document.querySelectorAll('.stat').forEach(b=>b.onclick=()=>{filter=filter===b.dataset.f?'all':b.dataset.f;renderTugas()});
@@ -503,7 +508,7 @@ function renderTugas(){
   let list=all.filter(d=>showPast||state(d)!=='past');
   if(filter==='ambil')list=list.filter(d=>d.items.some(i=>i.r==='ambil'&&i.sure));
   if(filter==='kutip')list=list.filter(d=>d.items.some(i=>i.r==='kutip'&&i.sure));
-  if(filter==='awas')list=list.filter(d=>d.items.some(i=>i.sure)||d.ses.relief);
+  if(filter==='awas')list=list.filter(d=>d.items.some(i=>i.sure&&i.r!=='pdpc')||d.ses.relief);
   if(filter==='maybe')list=list.filter(hasMaybe);
   const box=document.getElementById('duties');
   if(!list.length){box.innerHTML='<div class="empty">Tiada tugas untuk tapisan ini.</div>';return}
@@ -661,4 +666,3 @@ try{const t=localStorage.getItem('pat26-tab');if(t){const b=document.querySelect
 
 </body>
 </html>
-
